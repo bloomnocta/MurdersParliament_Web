@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.header{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+} 
+
+.right-side{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.header > div > nav > ul{
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.icons{
+    display: flex;
+    gap: 16px;
+}

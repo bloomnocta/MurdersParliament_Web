@@ -37,6 +37,12 @@ ul{
     position: sticky;
     top: 0;
     background-color: #b60000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 40px;
 }
 
 /* LOGO  */
@@ -76,7 +82,6 @@ ul{
     display: flex;
     gap: 16px;
 }
-
 
 .social-icons a{
     font-size: 1.5rem;
@@ -181,5 +186,3 @@ ul{
 .about-image, .about-text{
     flex: 1;
 }
-
-/* CONTACT */

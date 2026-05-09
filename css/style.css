@@ -37,12 +37,6 @@ ul{
     position: sticky;
     top: 0;
     background-color: #b60000;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 24px 40px;
 }
 
 /* LOGO  */
@@ -66,7 +60,6 @@ ul{
     display: flex;
     gap: 24px;
 }
-
 
 .navbar a{
     font-size: 1.1rem;

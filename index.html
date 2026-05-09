@@ -4,36 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Murder's Parliament</title>
+
+    <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <section class="header">
+        <!-- NAV -->
+        <header class="main-header">
             <a href="#" class="logo">Logo</a>
-            <div class="right-side">
-                <nav>
+                <nav class="navbar">
                     <ul>
-                        <li>
-                            <a href="#">STEAM</a>
-                        </li>
-                        <li>
-                            <a href="#">GALLERY</a>
-                        </li>
-                        <li>
-                            <a href="#">ABOUT US</a>
-                        </li>
-                        <li>
-                            <a href="#">CONTACT</a>
-                        </li>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#itchio">ITCH.IO</a></li>
+                        <li><a href="#characters">CHARACTERS</a></li>
+                        <li><a href="#about">ABOUT US</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </nav>
-                <div class="icons">
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-image">
+                <img src="https://picsum.photos/seed/mar/1280/200" alt="">
+            </div>
+        </section>
+
+        <!-- GAME SECTION -->
+        <section class="game-section">
+            <!-- VIDEO -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Gameplay"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <!-- INFO -->
+            <div class="game-info">
+
+                <div class="info-image">
+                    <img src="https://picsum.photos/seed/jcr/720/720" alt="">
+                </div>
+
+                <div class="buttons-text">
+                    <div class="buttons-group">
+                        <a href="#" class="btn">Steam</a>
+                        <a href="#" class="btn">Itch.io</a>
+                    </div>
+                </div>
+
+                <div class="info-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt molestiae et sed quo molestias corporis fugit quidem praesentium. Animi exercitationem dignissimos veritatis! Repellat velit architecto doloremque dolor atque voluptatem suscipit?</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="gallery" id="characters">
+            <div class="section-title">
+                <h2>Gallery</h2>
+            </div>
+            <!-- CARRUSEL -->
+        </section>
+
+        <!-- ABOUT US -->
+        <section class="about" id="about">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/jcr/720/720" alt="">
+                </div>
+
+                <div class="about-text">
+                    <p>Info sobre estudio</p>
+                    <p>Inspiracion, desarrollo, detalles importantes...</p>
                 </div>
             </div>
         </section>
+
+        <!-- CONTACT  -->
+        <section class="contact" id="contact">
+            <div class="section-title">
+                <h2>Contact</h2>
+            </div>
+
+            <div class="contact-form">
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+
+        </footer>
     </div>
 </body>
 

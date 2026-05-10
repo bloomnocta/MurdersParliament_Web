@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Murder's Parliament|Home</title>
+    <title>Murder's Parliament - HOME</title>
 
     <!-- FONT AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -18,27 +18,55 @@
     <div class="wrapper">
         <!-- NAV -->
         <header class="main-header">
-            <a href="#" class="logo">Logo</a>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="#home">HOME</a></li>
-                        <li><a href="#itchio">ITCH.IO</a></li>
-                        <li><a href="#characters">CHARACTERS</a></li>
-                        <li><a href="#about">ABOUT US</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
-                </nav>
+            <!-- MENU HAMBURGUESA -->
+            <input class="side-menu" type="checkbox" id="sideMenu">
 
-                <div class="social-icons">
+            <!-- ICONOS MOBILE -->
+            <label class="icons-mobile" for="sideMenu">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <!-- LOGO -->
+            <a href="#" class="logo">Logo</a>
+
+            <!-- MENU DESKTOP -->
+            <nav class="nav-desktop">
+                <ul class="menu-desktop">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#itchio">ITCH.IO</a></li>
+                    <li><a href="#characters">CHARACTERS</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+
+           <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>                
+            </div>
+
+            <!-- MENU MOBILE -->
+            <nav class="nav-mobile">
+                <ul class="menu-mobile">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#itchio">ITCH.IO</a></li>
+                    <li><a href="#characters">CHARACTERS</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+
+                <div class="mobile-socials">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </div>
+            </nav>
         </header>
 
         <!-- HERO -->
         <section class="hero" id="home">
             <div class="hero-image">
-                <img src="https://picsum.photos/seed/mar/1280/200" alt="">
+                <img src="https://picsum.photos/seed/mar/1820/200" alt="">
             </div>
         </section>
 
@@ -76,7 +104,38 @@
             <div class="section-title">
                 <h2>Gallery</h2>
             </div>
-            <!-- CARRUSEL -->
+
+            <div class="slideshow-container">
+
+                <!-- SLIDE 1 -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="https://picsum.photos/seed/picsum/1080/720"/>
+                </div>
+                <!-- SLIDE 2 -->
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://picsum.photos/seed/lorem/1080/720" />
+                </div>
+                <!-- SLIDE 3 -->
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://picsum.photos/seed/foo/1080/720" />
+                </div>
+
+                <!-- Botones anterior y siguiente -->
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>
+            <br />
+
+            <!-- Los puntos de navegación -->
+            <div style="text-align: center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
         </section>
 
         <!-- ABOUT US -->
@@ -101,15 +160,86 @@
             <div class="section-title">
                 <h2>Contact</h2>
             </div>
-
-            <div class="contact-form">
-
+            <div class="form-wrapper">
+                <div class="card-form">
+                    <div class="form-header">
+                        <h3>Contacta con nosotros</h3>
+                        <p>¿Quieres recibir novedades sobre Murder's Parliament?
+                        Escríbenos y mantente al día.</p>
+                    </div>
+                    <form>
+                        <div class="rel-input-group">
+                            <label for="name">Nombre Completo:</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required maxlength="50">
+                        </div>
+                        <div class="rel-input-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="form-options">
+                            <p>¿Has jugado algún juego nuestro?</p>
+                            <div class="option-row">
+                                <label>
+                                    <input type="radio" name="played">
+                                    Si
+                                </label>
+                                <label>
+                                    <input type="radio" name="played">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-options">
+                            <p>¿Quieres recibir novedades?</p>
+                            <div class="option-row">
+                                <label>
+                                    <input type="checkbox" name="news">
+                                    Quiero recibir noticias
+                                </label>
+                            </div>
+                        </div>
+                        <div class="rel-input-group">
+                            <label for="msg">Dejanos un mensaje</label>
+                            <textarea name="msg" id="msg" placeholder="Escribe aquí tu mensaje..."></textarea>
+                        <div>
+                        <input type="submit" value="Enviar" class="submit-btn">
+                    </form>
+                </div>
             </div>
         </section>
 
         <!-- FOOTER -->
         <footer>
+            <div class="footer-top">
 
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#characters">CHARACTERS</a></li>
+                        <li><a href="#about">ABOUT US</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-socials">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © 2026 Murder's Parliament
+                </p>
+            </div>
         </footer>
     </div>
 </body>

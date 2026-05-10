@@ -1,3 +1,13 @@
+:root{
+    --size-gap: 4rem;
+    --primary-color: #b60000;
+    --bg-color: #f5f1ec;
+    --hero-color: #2b0040;
+    --text-color: #222;
+}
+
+/* RESET */
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +16,8 @@
 }
 
 body{
-    background-color: #f5f1ec;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 img{
@@ -26,23 +37,30 @@ ul{
 /* WRAPPER */
 
 .wrapper{
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding-inline: 40px;
 }
 
-/* HEADER  */
+/* -------------------------------HEADER-------------------------------  */
 
 .main-header{
     position: sticky;
     top: 0;
-    background-color: #b60000;
+    width: 100%;
+
+    background-color: var(--primary-color);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 24px 40px;
+    padding: 20px 40px;
+}
+
+.main-header > *{
+    min-width: 0;
 }
 
 /* LOGO  */
@@ -50,29 +68,27 @@ ul{
 .logo{
     font-size: 2rem;
     font-weight: bold;
+
+    position: relative;
+    z-index: 2000;
 }
 
-/* RIGHT SIDE */
+/* MENU DESKTOP */
 
-.right-side{
+.menu-desktop{
     display: flex;
     align-items: center;
     gap: 32px;
+
+    flex-wrap: wrap;
 }
 
-/* NAV */
-
-.navbar ul{
-    display: flex;
-    gap: 24px;
-}
-
-.navbar a{
+.menu-desktop a{
     font-size: 1.1rem;
     transition: 0.3s;
 }
 
-.navbar a:hover{
+.menu-desktop a:hover{
     opacity: 0.7;
 }
 
@@ -87,16 +103,114 @@ ul{
     font-size: 1.5rem;
 }
 
+/* MOBILE MENU */
+
+.side-menu{
+    display: none;
+}
+
+/* ICONOS HAMBURGUESA */
+
+.icons-mobile{
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    z-index: 2000;
+}
+
+.icons-mobile .fa-xmark{
+    display: none;
+}
+
+/* MENU MOBILE */
+
+.nav-mobile{
+    position: fixed;
+    /* marca la distnacia entre el elemento y su padre */
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--primary-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.4s;
+}
+
+.menu-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.menu-mobile a{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.mobile-socials{
+    position: absolute;
+    bottom: 40px;
+
+    display: flex;
+    gap: 40px;
+}
+
+.mobile-socials a{
+    font-size: 2.5rem;
+}
+
+/* LOGICA TOGGLE */
+
+.side-menu:checked ~ .nav-mobile{
+    opacity: 1;
+    visibility: visible;
+}
+
+.side-menu:checked ~ .icons-mobile .fa-bars{
+    display: none;
+}
+
+.side-menu:checked ~ .icons-mobile .fa-xmark{
+    display: inline-block;
+}
+
+/* --------------------------------------------------------------------------------- */
+
 /* HERO  */
 
 .hero{
-    background-color: #2b0040;
-    min-height: 150px;
+    background-color: var(--hero-color);
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
 
     display: flex;
     align-items: flex-end;
 
-    overflow: hidden;
+}
+
+.hero-image{
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover
 }
 
 /* GAME SECTION  */
@@ -105,7 +219,7 @@ ul{
     display: flex;
     gap: 2rem;
 
-    padding: 4rem;
+    padding: var(--size-gap);
 }
 
 .video-container{
@@ -138,8 +252,8 @@ ul{
 
 .buttons-text{
     display: flex;
-    gap: 24px;
     align-items: center;
+    gap: 24px;
 }
 
 .buttons-group{
@@ -149,7 +263,7 @@ ul{
 }
 
 .btn{
-    background-color: #b60000;
+    background-color: var(--primary-color);
     padding: 12px 24px;
     border-radius: 30px;
 
@@ -161,12 +275,105 @@ ul{
     opacity: 0.8;
 }
 
-/* GALLERY */
+/* ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡GALLERY (PENDIENTE)!!!!!!!!!!!!!!!! */
 
-/* ABOUT */
+.gallery{
+    padding: var(--size-gap);
+}
 
-.about{
-    padding: 4rem;
+.slideshow-container{
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: var(--size-gap) auto 2rem;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img{
+    width: 100%;
+    height: 600px;
+
+    object-fit: cover;
+    
+    border-radius: 10px;
+}
+
+.prev,.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #b60000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Posicionar el botón "siguiente" a la derecha */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Texto de número (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Los puntos/indicadores de navegación */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* ANIMACIONES */
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡GALLERY (PENDIENTE)!!!!!!!!!!!!!!!! */
+
+/* Sections */
+
+.about, .contact, footer{
+    padding: var(--size-gap);
 }
 
 .section-title{
@@ -177,12 +384,275 @@ ul{
     font-size: 2.5rem;
 }
 
+/* ABOUT */
+
 .about-content{
     display: flex;
-    gap: 40px;
     align-items: center;
+    gap: 40px;
 }
 
 .about-image, .about-text{
     flex: 1;
+}
+
+/* CONTACT */
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-form{
+    width: 100%;
+    max-width: 700px;
+
+    background-color: white;
+
+    padding: 3rem;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.form-header{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.form-header h3{
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.form-header p{
+    color: #555;
+    line-height: 1.6;
+}
+
+.card-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.rel-input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rel-input-group label{
+    font-weight: bold;
+}
+
+.rel-input-group input, .rel-input-group textarea{
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 2px solid #ddd;
+    border-radius: 12px;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+}
+
+/* Focus para cuando se seleccione se ponga rojo el borde de la caja */
+.rel-input-group input:focus, .rel-input-group textarea:focus{
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.rel-input-group textarea{
+    min-height: 160px;
+    /* Si el user quiere hacer mas vertical el text area */
+    resize: vertical;
+}
+
+.form-options{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-options p{
+    font-weight: bold;
+}
+
+.option-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.option-row label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #444;
+}
+
+.submit-btn{
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover{
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+.footer-nav ul{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.footer-nav a, .footer-socials a{
+    color: black;
+}
+
+.footer-socials{
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials a{
+    font-size: 1.3rem;
+}
+
+.footer-bottom{
+    text-align: center;
+}
+
+
+/* MEDIA QUERIES */
+/* TABLET */
+
+@media screen and (max-width: 860px) {
+
+    /* QUITAR BORDES LATERALES */
+    .wrapper{
+        padding-inline: 0;
+    }
+
+
+    /* -------------------------------HEADER-------------------------------  */
+    .main-header{
+        padding: 20px;
+    }
+
+    /* DESKTOP MENU OFF */
+
+    .nav-desktop{
+        display: none;
+    }
+
+    /* MENU MOBILE ON */
+
+    .icons-mobile{
+        display: block;
+    }
+
+    /* SECTIONS */
+
+    .hero{
+        height: 180px;
+    }
+
+    .game-section{
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .about,
+    .gallery,
+    .contact,
+    footer{
+        padding: 2rem;
+    }
+
+    .about-content{
+        flex-direction: column;
+    }
+
+    /* FOOTER */
+
+    .footer-top{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* MOVIL */
+
+@media screen and (width <= 480px){
+
+    .menu-mobile a{
+        font-size: 2.5rem;
+    }
+
+    .hero{
+        height: 140px;
+    }
+
+    .video-container iframe{
+        height: 250px;
+    }
+
+    .buttons-text{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mySlides img{
+        height: 300px;
+    }
+
+    .card-form{
+        padding: 2rem 1.5rem;
+    }
+
+    .form-header h3{
+        font-size: 1.6rem;
+    }
+
+    .option-row{
+        flex-direction: column;
+        gap: 10px;
+    }
 }

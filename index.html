@@ -38,7 +38,6 @@
                     <li><a href="#characters">CHARACTERS</a></li>
                     <li><a href="#about">ABOUT US</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="formulario.html">FORMULARIO</a></li>
                 </ul>
             </nav>
 
@@ -161,9 +160,51 @@
             <div class="section-title">
                 <h2>Contact</h2>
             </div>
-
-            <div class="contact-form">
-
+            <div class="form-wrapper">
+                <div class="card-form">
+                    <div class="form-header">
+                        <h3>Contacta con nosotros</h3>
+                        <p>¿Quieres recibir novedades sobre Murder's Parliament?
+                        Escríbenos y mantente al día.</p>
+                    </div>
+                    <form>
+                        <div class="rel-input-group">
+                            <label for="name">Nombre Completo:</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required maxlength="50">
+                        </div>
+                        <div class="rel-input-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="form-options">
+                            <p>¿Has jugado algún juego nuestro?</p>
+                            <div class="option-row">
+                                <label>
+                                    <input type="radio" name="played">
+                                    Si
+                                </label>
+                                <label>
+                                    <input type="radio" name="played">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-options">
+                            <p>¿Quieres recibir novedades?</p>
+                            <div class="option-row">
+                                <label>
+                                    <input type="checkbox" name="news">
+                                    Quiero recibir noticias
+                                </label>
+                            </div>
+                        </div>
+                        <div class="rel-input-group">
+                            <label for="msg">Dejanos un mensaje</label>
+                            <textarea name="msg" id="msg" placeholder="Escribe aquí tu mensaje..."></textarea>
+                        <div>
+                        <input type="submit" value="Enviar" class="submit-btn">
+                    </form>
+                </div>
             </div>
         </section>
 

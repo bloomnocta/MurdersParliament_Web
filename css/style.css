@@ -36,6 +36,7 @@ ul{
 .main-header{
     position: sticky;
     top: 0;
+    z-index: 999;
     background-color: #b60000;
 
     display: flex;
@@ -266,6 +267,87 @@ ul{
 
 /* GALLERY */
 
+.gallery{
+    padding: 4rem;
+}
+
+.slideshow-container {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: 4rem auto 2rem auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img{
+    width: 100%;
+    height: 600px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.prev,.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #b60000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Posicionar el botón "siguiente" a la derecha */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Texto de número (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Los puntos/indicadores de navegación */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
 /* ABOUT */
 
 .about{
@@ -292,7 +374,57 @@ ul{
 
 /* CONTACT */
 
+.contact{
+    padding: 4rem;
+}
+
 /* FOOTER */
+
+footer{
+    padding: 4rem;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+.footer-nav ul{
+    display: flex;
+    gap: 24px;
+}
+
+.footer-nav a{
+    color: black;
+}
+
+.footer-socials{
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials a{
+    color: black;
+    font-size: 1.3rem;
+}
+
+.footer-bottom{
+    text-align: center;
+}
+
+/* ANIMACIONES */
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* MEDIA QUERIES */
 /* TABLET */

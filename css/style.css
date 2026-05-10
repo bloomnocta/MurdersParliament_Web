@@ -166,6 +166,7 @@ ul{
     max-height: 100%;
 }
 
+
 .side-menu:checked ~ .icons-mobile .fa-bars{
     display: none;
 }
@@ -392,6 +393,8 @@ ul{
         opacity: 1;
         visibility: visible;
     }
+    
+    
 
     .side-menu:checked ~ .icons-mobile .fa-bars{
         display: none;

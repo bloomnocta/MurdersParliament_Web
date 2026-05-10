@@ -1,3 +1,6 @@
+:root{
+    --size-gap: 4rem;
+}
 *{
     margin: 0;
     padding: 0;
@@ -209,7 +212,7 @@ ul{
     display: flex;
     gap: 2rem;
 
-    padding: 4rem;
+    padding: var(--size-gap);
 }
 
 .video-container{
@@ -268,14 +271,14 @@ ul{
 /* GALLERY */
 
 .gallery{
-    padding: 4rem;
+    padding: var(--size-gap);
 }
 
 .slideshow-container {
     width: 100%;
     max-width: 1000px;
     position: relative;
-    margin: 4rem auto 2rem auto;
+    margin: var(--size-gap) auto 2rem auto;
 }
 
 .mySlides {
@@ -351,7 +354,7 @@ ul{
 /* ABOUT */
 
 .about{
-    padding: 4rem;
+    padding: var(--size-gap);
 }
 
 .section-title{
@@ -375,13 +378,13 @@ ul{
 /* CONTACT */
 
 .contact{
-    padding: 4rem;
+    padding: var(--size-gap);
 }
 
 /* FOOTER */
 
 footer{
-    padding: 4rem;
+    padding: var(--size-gap);
 }
 
 .footer-top{
@@ -545,7 +548,7 @@ footer{
         padding: 2rem;
     }
 
-    .about{
+    .about, .gallery, .contact{
         padding: 2rem;
     }
 
@@ -553,6 +556,15 @@ footer{
         flex-direction: column;
     }
 
+    .footer-top{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* MOVIL */
@@ -574,4 +586,5 @@ footer{
         flex-direction: column;
         align-items: flex-start;
     }
+
 }

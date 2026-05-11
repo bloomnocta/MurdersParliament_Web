@@ -645,6 +645,10 @@ ul{
         padding: 2rem;
     }
 
+    .video-container iframe{
+        height: 250px;
+    }
+
     .about,
     .gallery,
     .contact,
@@ -682,7 +686,7 @@ ul{
     }
 
     .video-container iframe{
-        height: 250px;
+        height: 200px;
     }
 
     .buttons-text{

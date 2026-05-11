@@ -604,7 +604,132 @@ ul{
 
 /* PAGINA GALERIA PERSONAJES */
 
+.characters-section{
+    padding: var(--size-gap);
+}
 
+/* GALERIA */
+
+.characters-gallery{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: flex-end;
+
+    gap: 24px;
+
+    margin-bottom: 6rem;
+}
+
+/* TARJETAS */
+
+.character-card{
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    transition: 0.3s ease;
+
+    background-color: #ddd;
+}
+
+.character-card img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+/* TAMAÑOS */
+
+.character-card.large{
+    width: 260px;
+    height: 420px;
+}
+
+.character-card.medium{
+    width: 220px;
+    height: 320px;
+}
+
+.character-card.small{
+    width: 170px;
+    height: 220px;
+}
+
+/* .character-card.tall{
+    width: 220px;
+    height: 500px;
+} */
+
+/* HOVER */
+
+.character-card:hover{
+    transform: translateY(-10px);
+}
+
+.character-card:hover img{
+    transform: scale(1.05);
+}
+
+/* FICHAS */
+
+.characters-info{
+    display: flex;
+    flex-direction: column;
+
+    gap: 4rem;
+}
+
+.character-profile{
+    display: flex;
+    align-items: center;
+
+    gap: 40px;
+
+    background-color: white;
+
+    padding: 2rem;
+
+    border-radius: 30px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* IMAGEN */
+
+.profile-image{
+    width: 280px;
+
+    /* factor contraccion */
+    flex-shrink: 0;
+}
+
+.profile-image img{
+    border-radius: 20px;
+}
+
+/* TEXTO */
+
+.profile-text{
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.profile-text h3{
+    font-size: 2rem;
+}
+
+.character-role{
+    color: var(--primary-color);
+
+    font-weight: bold;
+}
 
 /* MEDIA QUERIES */
 /* TABLET */
@@ -670,6 +795,32 @@ ul{
     .footer-nav ul{
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Personajes */
+    .characters-section{
+        padding: 2rem;
+    }
+
+    .character-profile{
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .profile-image{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .character-card.large,
+    .character-card.medium,
+    .character-card.small,
+    .character-card.tall{
+        width: 100%;
+        max-width: 350px;
+
+        height: 400px;
     }
 }
 

@@ -42,6 +42,11 @@ ul{
     margin: 0 auto;
     padding-inline: 40px;
 }
+header > img{
+    width: 2rem;
+    height: auto;
+    display: block;
+}
 
 /* -------------------------------HEADER-------------------------------  */
 

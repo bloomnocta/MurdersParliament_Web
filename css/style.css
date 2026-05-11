@@ -1,7 +1,7 @@
 :root{
     --size-gap: 4rem;
-    --primary-color: #b60000;
-    --bg-color: #f5f1ec;
+    --primary-color: #567c7b;
+    --bg-color: #ecd5c0;
     --hero-color: #2b0040;
     --text-color: #222;
 }
@@ -194,27 +194,19 @@ ul{
 /* HERO  */
 
 .hero{
-    background-color: var(--hero-color);
     width: 100%;
-    height: 220px;
-
     overflow: hidden;
-
-    display: flex;
-    align-items: flex-end;
-
 }
 
 .hero-image{
     width: 100%;
-    height: 100%;
 }
 
 .hero-image img{
     width: 100%;
-    height: 100%;
-
-    object-fit: cover
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 /* GAME SECTION  */
@@ -398,6 +390,7 @@ ul{
 
 .about-content{
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     gap: 40px;
 }
@@ -762,7 +755,7 @@ ul{
     /* SECTIONS */
 
     .hero{
-        height: 180px;
+        height: 100%;
     }
 
     .game-section{
@@ -833,7 +826,7 @@ ul{
     }
 
     .hero{
-        height: 140px;
+        height: 100%;
     }
 
     .video-container iframe{

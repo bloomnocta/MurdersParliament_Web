@@ -629,7 +629,7 @@ ul{
 
 .character-card img{
     width: 100%;
-    height: 100%;
+    height: 95%;
 
     object-fit: contain;
 
@@ -665,7 +665,7 @@ ul{
 }
 
 .character-card:hover img{
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* FICHAS */

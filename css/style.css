@@ -374,6 +374,7 @@ ul{
         opacity: 1;
     }
 }
+
 /* GALLERY */
 
 /* Sections */
@@ -407,6 +408,39 @@ ul{
     flex: 1;
 }
 
+.rotate-scale-down-ver:hover {
+	-webkit-animation: rotate-scale-down-ver 0.65s linear both;
+	animation: rotate-scale-down-ver 0.65s linear both;
+}
+
+@-webkit-keyframes rotate-scale-down-ver {
+  0% {
+    -webkit-transform: scale(1) rotateY(0);
+    transform: scale(1) rotateY(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateY(180deg);
+    transform: scale(0.5) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateY(360deg);
+    transform: scale(1) rotateY(360deg);
+  }
+}
+@keyframes rotate-scale-down-ver {
+  0% {
+    -webkit-transform: scale(1) rotateY(0);
+    transform: scale(1) rotateY(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateY(180deg);
+    transform: scale(0.5) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateY(360deg);
+    transform: scale(1) rotateY(360deg);
+  }
+}
 .about-info{
     flex: 1;
 
@@ -728,6 +762,49 @@ ul{
     font-weight: bold;
 }
 
+/* BOTON MUSICA */
+.music-player{
+    position: fixed;
+
+    right: 14px;
+    bottom: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    background-color: var(--primary-color);
+
+    border-radius: 50%;
+
+    z-index: 9999;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.music-player i{
+    position: absolute;
+
+    color: white;
+    font-size: 1.1rem;
+
+    pointer-events: none;
+}
+
+.music-player audio{
+    width: 58px;
+    height: 58px;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
 /* MEDIA QUERIES */
 /* TABLET */
 
@@ -776,6 +853,23 @@ ul{
 
     .about-content{
         flex-direction: column;
+    }
+
+    .music-player{
+        width: 48px;
+        height: 48px;
+
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .music-player audio{
+        width: 48px;
+        height: 48px;
+    }
+
+    .music-player i{
+        font-size: 1rem;
     }
 
     /* FOOTER */
